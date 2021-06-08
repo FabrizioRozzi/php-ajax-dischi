@@ -32,12 +32,13 @@
       </div>
   </header>
   <main>
-
+  
   <div class="album">
-    <div>
-        <?php foreach($database as $album) : ?>
+    <?php foreach($database as $album) : ?>
+    <div class="container-album">
+        
       
-          <img 
+          <img class="img-album"
           src="<?php echo $album['poster'] ?>" alt=""
         >
          
@@ -48,10 +49,11 @@
           <h6><?php echo $album['year'] ?></h6>
         
         
-        <?php endforeach ?>
+        
     </div>  
+    <?php endforeach ?>  
   </div>
-      
+    
    
   </main>
 

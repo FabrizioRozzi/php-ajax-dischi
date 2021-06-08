@@ -12,7 +12,7 @@ header{
   height: 100px;
   background-color: #2E3A46;
 }
-img{
+.logo img{
   height: 80px;
   background-color: #2E3A46;
   padding-left: 20px;
@@ -28,21 +28,27 @@ main{
   max-width: 1200px;
   height: calc(100vh - 100px);
   margin: 0 auto;
-  background-color: white;
 }
-.container-album{
-  
-}
+
 .album{
   display: flex;
   align-items: center;
+  flex-wrap: wrap;
+ 
+}  
+.container-album{
   background-color: #2E3A46;
   margin: 0 10px;
+  margin-top: 50px;
   height: auto;
+  text-align: center;
   width: 200px;
-}  
-img{
+  padding-bottom: 3%;
+}
+.img-album{
+  margin: 10px 0;
   width: 160px;
+  height: 200px;
 }
 h5{
   color: white;
