@@ -32,19 +32,27 @@
       </div>
   </header>
   <main>
-    <div class="container-album">
-      <div class="album">
+
+  <div class="album">
+    <div>
         <?php foreach($database as $album) : ?>
-        <img 
+      
+          <img 
           src="<?php echo $album['poster'] ?>" alt=""
         >
-        <h5><?php echo $album['title'] ?></h5>
-        <h6><?php echo $album['author'] ?></h6><br>
-        <h6><?php echo $album['year'] ?></h6>
+         
+        
+        
+          <h5><?php echo $album['title'] ?></h5>
+          <h6><?php echo $album['author'] ?></h6><br>
+          <h6><?php echo $album['year'] ?></h6>
+        
+        
         <?php endforeach ?>
-      </div>
-    </div>
-    
+    </div>  
+  </div>
+      
+   
   </main>
 
 
