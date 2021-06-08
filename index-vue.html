@@ -8,39 +8,49 @@
   <title>Document</title>
 </head>
 <body>
+  <div id="app">
+
   
   <header>
-    
-      <div class="logo">
-        <img src="images.png" alt="">
-      </div>
-      <div class="search">
-        <label for="cars">Choose a genre:</label>
-  
-        <select 
-          @change="changeFunction()"
-          v-model="optionGenre"
-          >
+    <div class="logo">
+      <img src="images.png" alt="">
+    </div>
+    <div class="search">
+      <label for="cars">Choose a genre:</label>
+        <select>
           <option 
             selected
             value="1">so tutti</option>
-          <option
-            v-for="(gen, index) in genere" :key='index'
-            :value="gen">{{gen}}</option>
+          <option></option>
         </select>
       </div>
-    
-    
   </header>
   <main>
-    ciao
+  
+  <div class="album" v-for="( el, index ) in arrAlbum" :key="index">
+    
+    <div class="container-album">
+          <img class="img-album"
+          :src="el.poster" alt=""
+        >
+
+          <h5>{{el.title}} </h5>
+          <h6>{{el.author}} </h6><br>
+          <h6>{{el.year}} </h6>
+    </div>  
+  
+  </div>
+    
+   
   </main>
-
-
-
-
-
+</div>
+  
+   
 
   <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js" integrity="sha512-bZS47S7sPOxkjU/4Bt0zrhEtWx0y0CRkhEp8IckzK+ltifIIE9EMIMTuT/mEzoIMewUINruDBIR/jJnbguonqQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  
+  <script src="main.js"></script>
 </body>
 </html>
