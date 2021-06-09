@@ -16,18 +16,27 @@
       <img src="images.png" alt="">
     </div>
     <div class="search">
-      <label for="cars">Choose a genre:</label>
-        <select>
+      
+        <select
+        @change="getAPI"
+        v-model='genreToSearch'
+        >
+
           <option 
-            selected
-            value="1">so tutti</option>
-          <option></option>
+            
+            value="all">Tutti i generi</option>
+          <option
+            v-for="genre in genres"
+            :value="genre"
+          >
+            {{genre}}
+          </option>
         </select>
       </div>
   </header>
   <main>
   
-  <div class="album" v-for="( el, index ) in arrAlbum" :key="index">
+  <div class="album" v-for="( el, index ) in albums" :key="index">
     
     <div class="container-album">
           <img class="img-album"
